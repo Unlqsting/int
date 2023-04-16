@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Homepage</title>
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/699ad118a9.js" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="internfront.css">
+
+  <header>
+    <!-- Logo -->
+    <div class="headWrap">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <!-- Account Icon -->
+      <div class="account">
+        <i id="account-icon" class="fas fa-user-circle account-icon"></i>
+        <div class="account-dropdown">
+          <a href="#"><i class="fas fa-cog"></i> Admin</a>
+          <a href="#"><i class="fas fa-chart-bar"></i> Reports</a>
+          <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Clinical Study</a></li>
+          <li><a href="#">Vendors</a></li>
+          <li><a href="#">Specimen</a></li>
+          <li><a href="#">Budget</a></li>
+          <li><a href="#">Results</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+      </nav>
+    
+  </header>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div id="filter" class="filter">
+        <head>Filter</head>
+        <a href="#">Study Phase</a>
+        <a href="#">Study Status</a>
+        <a href="#">Program Name</a>
+        <a href="#">Therapeutic Area</a>
+    </div>
+
+    <div class="diagram-grid">
+        <div id="diagram1" onclick="openDiagramModal()" class="diagram">Diagram 1</div>
+        <div class="diagram">Diagram 2</div>
+        <div class="diagram">Diagram 3</div>
+        <div class="diagram">Diagram 4</div>
+        <div class="diagram">Diagram 5</div>
+        <div class="diagram">Diagram 6</div>
+    </div>
+  </div>
+
+  <div id="diagramModal" class="diagramModal">
+    <!-- Modal content -->
+    <div class="dModalContent">
+      <span class="close">&times;</span>
+      <p>example text</p>
+    </div>
+  </div>
+
+</body>
+
+<script src="internfront.js"></script>
+</html>
