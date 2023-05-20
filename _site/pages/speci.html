@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="../scss/speci.css">
+  <script src="https://kit.fontawesome.com/699ad118a9.js" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+          <img src="logo.png" alt="Logo">
+      </div>
+      <div class="account-container">
+        <i id="account-icon" class="fas fa-user-circle account-icon"></i>
+        <div class="account-dropdown">
+          <a href="#"><i class="fas fa-cog"></i> Admin</a>
+          <a href="#"><i class="fas fa-chart-bar"></i> Reports</a>
+          <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Clinical Study</a></li>
+        <li><a href="#">Vendors</a></li>
+        <li><a href="#">Specimen</a></li>
+        <li><a href="#">Budget</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+  <div class="wrapper">
+    <div class="filter-container">
+      <h2>Filter</h2>
+      <a href="#">Study Phase</a>
+      <a href="#">Study Status</a>
+      <a href="#">Program Name</a>
+      <a href="#">Therapeutic Area</a>
+    </div>
+    <div class="diagram-grid">
+      <canvas id="myChart" class="myChart">Diagram 1</canvas>
+      <div class="diagram2">Diagram 2</div>
+    </div>    
+  </div>
+  <div id="diagramModal" class="diagramModal">
+    <div class="dModalContent">
+      <span class="close">&times;</span>
+      <p>example text</p>
+    </div>
+  </div>
+  <svg width="500" height="300"></svg>
+</main>
+<script src="intstudy.js"></script>
+</body>
+</html>

@@ -41,7 +41,7 @@ g = svg.append('g')
   .attr('transform', `translate(${margin.left},${margin.top})`);
 
 // fetch the CSV data and render the chart
-fetch('data/CST.csv')
+fetch('../data/CST.csv')
   .then(response => response.text())
   .then(data => {
     // parse the CSV data into an array of objects
@@ -49,8 +49,8 @@ fetch('data/CST.csv')
     result = rows.map(row => {
       values = row.split(',');
       return {
-        therapeuticArea,
-        studyPhase
+        therapeuticArea: values[1],
+        studyPhase: values[3]
       };
     });
 

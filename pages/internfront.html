@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Homepage</title>
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/699ad118a9.js" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="../scss/internfront.css">
+</head>
+
+<body>
+  <header>
+    <!-- Logo -->
+    <div class="headWrap">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <!-- Account Icon -->
+      <div class="account">
+        <i id="account-icon" class="fas fa-user-circle account-icon"></i>
+        <div class="account-dropdown">
+          <a href="#"><i class="fas fa-cog"></i> Admin</a>
+          <a href="#"><i class="fas fa-chart-bar"></i> Reports</a>
+          <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li class="active"><a href="../pages/internfront.html">Home</a></li>
+        <li><a href="../pages/intstudy.html">Clinical Study</a></li>
+        <li><a href="#">Vendors</a></li>
+        <li><a href="#">Specimen</a></li>
+        <li><a href="#">Budget</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <div id="filter" class="filter-container">
+      <h2>Filter</h2>
+      <a href="#">Study Phase</a>
+      <a href="#">Study Status</a>
+      <a href="#">Program Name</a>
+      <a href="#">Therapeutic Area</a>
+    </div>
+
+    <div class="diagram-grid">
+      <div id="diagram1" class="diagram">Diagram 1</div>
+      <div id="diagram2" class="diagram">Diagram 2</div>
+      <div id="diagram3" class="diagram">Diagram 3</div>
+      <div id="diagram4" class="diagram">Diagram 4</div>
+      <div id="diagram5" class="diagram">Diagram 5</div>
+      <div id="diagram6" class="diagram">Diagram 6</div>
+    </div>
+  </div>
+
+  <div id="diagramModal" class="diagramModal" style="display: none;">
+    <!-- Modal content -->
+    <div class="dModalContent">
+      <span class="close">&times;</span>
+      <p>example text</p>
+    </div>
+  </div>
+
+  <script >
+    // Get the moda
+
+    var diagramModal = document.getElementById("diagramModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("diagram1");
+
+    // Get the close button
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on a diagram, open the modal
+    function openDiagramModal() {
+        diagramModal.style.display = "block";
+    }
+
+    // When the user clicks on the close button, close the modal
+    span.addEventListener("click", function() {
+      diagramModal.style.display = "none";
+    });
+
+    // When the user clicks outside the modal, close it
+    window.addEventListener("click", function(event) {
+      if (event.target == diagramModal) {
+        diagramModal.style.display = "none";
+      }
+    });
+
+    for (var i = 1; i < 7; i++) {
+      var btn = document.getElementById("diagram" + i);
+      btn.addEventListener("click", openDiagramModal);
+    }
+
+  </script>
+</body>
+
+</html>
