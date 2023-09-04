@@ -2,11 +2,16 @@
 <html>
 <head>
   <title>My Homepage</title>
+  
   <!-- Font Awesome CDN -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
   <script src="https://kit.fontawesome.com/699ad118a9.js" crossorigin="anonymous"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="../scss/internfront.css">
+</head>
 
+<body>
   <header>
     <!-- Logo -->
     <div class="headWrap">
@@ -26,49 +31,86 @@
 
     <nav>
       <ul>
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Clinical Study</a></li>
+        <li class="active"><a href="../pages/internfront.html">Home</a></li>
+        <li><a href="../pages/intstudy.html">Clinical Study</a></li>
         <li><a href="#">Vendors</a></li>
         <li><a href="#">Specimen</a></li>
         <li><a href="#">Budget</a></li>
         <li><a href="#">Results</a></li>
         <li><a href="#">Resources</a></li>
       </ul>
-      </nav>
-    
+    </nav>
   </header>
-</head>
-
-<body>
 
   <div class="wrapper">
-    <div id="filter" class="filter">
-        <head>Filter</head>
-        <a href="#">Study Phase</a>
-        <a href="#">Study Status</a>
-        <a href="#">Program Name</a>
-        <a href="#">Therapeutic Area</a>
+    <div id="filter" class="filter-container">
+      <h2>Filter</h2>
+      <a href="#">Study Phase</a>
+      <a href="#">Study Status</a>
+      <a href="#">Program Name</a>
+      <a href="#">Therapeutic Area</a>
     </div>
 
     <div class="diagram-grid">
-        <div id="diagram1" onclick="openDiagramModal()" class="diagram">Diagram 1</div>
-        <div class="diagram">Diagram 2</div>
-        <div class="diagram">Diagram 3</div>
-        <div class="diagram">Diagram 4</div>
-        <div class="diagram">Diagram 5</div>
-        <div class="diagram">Diagram 6</div>
+      <div id="diagram1" class="diagram">
+        <svg width="600" height="200" id="myChart" class="myChart">Diagram 1</svg>
+        <script src="../js/diagram.js"></script>
+      </div>      
+      <div id="diagram2" class="diagram">Diagram 2</div>
+      <div id="diagram3" class="diagram">Diagram 3</div>
+      <div id="diagram4" class="diagram">Diagram 4</div>
+      <div id="diagram5" class="diagram">Diagram 5</div>
+      <div id="diagram6" class="diagram">Diagram 6</div>
     </div>
+    <!-- <div class="div">
+      <svg width="600" height="400" id="myChart" class="myChart">Diagram 1</svg>
+      <script src="../js/diagram.js"></script>
+    </div> -->
   </div>
 
-  <div id="diagramModal" class="diagramModal">
+  <div id="diagramModal" class="diagramModal" style="display: none;">
     <!-- Modal content -->
     <div class="dModalContent">
+      <svg width="800" height="800" id="myChart" class="myChart">Diagram 1</svg>
+      <script src="../js/diagram.js"></script>
       <span class="close">&times;</span>
-      <p>example text</p>
+      
     </div>
   </div>
 
+  <script >
+    // Get the moda
+
+    var diagramModal = document.getElementById("diagramModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("diagram1");
+
+    // Get the close button
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on a diagram, open the modal
+    function openDiagramModal() {
+        diagramModal.style.display = "block";
+    }
+
+    // When the user clicks on the close button, close the modal
+    span.addEventListener("click", function() {
+      diagramModal.style.display = "none";
+    });
+
+    // When the user clicks outside the modal, close it
+    window.addEventListener("click", function(event) {
+      if (event.target == diagramModal) {
+        diagramModal.style.display = "none";
+      }
+    });
+
+    for (var i = 1; i < 7; i++) {
+      var btn = document.getElementById("diagram" + i);
+      btn.addEventListener("click", openDiagramModal);
+    }
+
+  </script>
 </body>
 
-<script src="internfront.js"></script>
 </html>

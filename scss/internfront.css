@@ -132,6 +132,7 @@ main {
   margin-top: 115px;
   margin-left: 20px;
   margin-right: 20px;
+  align-items: center;
 }
 
 .filter-container {
@@ -181,6 +182,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
+  justify-content: center;
 }
 
 .diagram {
@@ -193,10 +195,41 @@ main {
 
 .diagramModal {
   display: none;
-  background-color: #f6f6f6;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  max-width: 800px;
+  background-color: #fff;
   border: 1px solid #ddd;
-  width: 250px;
-  padding: 20px;
-  height: 200px;
+  border-radius: 5px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: auto;
+}
+
+.dModalContent {
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-diagram {
+  /* Adjust this styling for your diagram */
+  width: 100%;
+  height: 300px;
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }/*# sourceMappingURL=internfront.css.map */

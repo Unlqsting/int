@@ -9,8 +9,15 @@ var btn = document.getElementById("diagram1");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on a diagram, open the modal
-function openDiagramModal() {
-    dModalContent.style.display = "block";
+function openDiagramModal(event) {
+  dModalContent.style.display = "block";
+  //append the diagram to the modal
+  var clickedDiagram = event.target.querySelector("svg");
+  var clonedDiagram = clickedDiagram.cloneNode(true);
+  var modalContent = diagramModal.querySelector(".dModalContent");
+  modalContent.innerHTML = ""; // Clear any existing content
+  modalContent.appendChild(clonedDiagram);
+
 }
 
 // When the user clicks on the close button, close the modal
