@@ -68,7 +68,7 @@ fetch('../data/CST.csv')
       .text(d => {
         // Modify the label text to fit within limited space
         const maxLength = 9;
-        return d.length > maxLength ? d.substring(0, maxLength - 2) + '...' : d;
+        return d.length > maxLength ? d.substring(0, maxLength - 3) + '...' : d;
     });
 
     // create the y-axis

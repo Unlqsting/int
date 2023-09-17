@@ -9,6 +9,7 @@
   <script src="https://kit.fontawesome.com/699ad118a9.js" crossorigin="anonymous"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="../scss/internfront.css">
+  <link rel="stylesheet" href="../scss/nav.css">
 </head>
 
 <body>
@@ -53,7 +54,7 @@
 
     <div class="diagram-grid">
       <div id="diagram1" class="diagram">
-        <svg width="600" height="200" id="myChart" class="myChart">Diagram 1</svg>
+        <svg width="600" height="300" id="myChart" class="myChart">Diagram 1</svg>
         <script src="../js/diagram.js"></script>
       </div>      
       <div id="diagram2" class="diagram">Diagram 2</div>
@@ -105,11 +106,12 @@
       }
     });
 
-    for (var i = 1; i < 7; i++) {
-      var btn = document.getElementById("diagram" + i);
-      btn.addEventListener("click", openDiagramModal);
-    }
-
+    document.addEventListener("DOMContentLoaded", function() {
+      for (var i = 1; i < 7; i++) {
+          var btn = document.getElementById("diagram" + i);
+          btn.addEventListener("click", openDiagramModal);
+      }
+    }); 
   </script>
 </body>
 

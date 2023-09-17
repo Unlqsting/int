@@ -32,4 +32,4 @@ window.addEventListener("click", function(event) {
   }
 });
 
-btn.addEventListener("click", openDiagramModal());
+btn.addEventListener("click", openDiagramModal);
