@@ -7,19 +7,22 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <script src="https://kit.fontawesome.com/699ad118a9.js" crossorigin="anonymous"></script>
+
   <!-- Custom CSS -->
+  <!-- CSS for the homepage, navbar, and filter feature is linked below -->
   <link rel="stylesheet" type="text/css" href="../scss/internfront.css">
   <link rel="stylesheet" href="../scss/nav.css">
+  <link rel="stylesheet" href="../scss/filter.css">
 </head>
 
 <body>
   <header>
-    <!-- Logo -->
+      <!-- Logo -->
     <div class="headWrap">
       <div class="logo">
         <img src="logo.png" alt="Logo">
       </div>
-      <!-- Account Icon -->
+      <!-- Account Icon code -->
       <div class="account">
         <i id="account-icon" class="fas fa-user-circle account-icon"></i>
         <div class="account-dropdown">
@@ -30,18 +33,21 @@
       </div>
     </div>
 
+    <!-- Nav bar code -->
     <nav>
       <ul>
         <li class="active"><a href="../pages/internfront.html">Home</a></li>
         <li><a href="../pages/intstudy.html">Clinical Study</a></li>
         <li><a href="#">Vendors</a></li>
-        <li><a href="#">Specimen</a></li>
+        <li><a href="../pages/speci.html">Specimen</a></li>
         <li><a href="#">Budget</a></li>
         <li><a href="#">Results</a></li>
         <li><a href="#">Resources</a></li>
       </ul>
     </nav>
   </header>
+
+  <!-- Main page content -->
 
   <div class="wrapper">
     <div id="filter" class="filter-container">
@@ -54,7 +60,7 @@
 
     <div class="diagram-grid">
       <div id="diagram1" class="diagram">
-        <svg width="600" height="300" id="myChart" class="myChart">Diagram 1</svg>
+        <svg width="600" height="300" id="chart_diagram1" class="chart_diagram1">Diagram 1</svg>
         <script src="../js/diagram.js"></script>
       </div>      
       <div id="diagram2" class="diagram">Diagram 2</div>
@@ -72,7 +78,7 @@
   <div id="diagramModal" class="diagramModal" style="display: none;">
     <!-- Modal content -->
     <div class="dModalContent">
-      <svg width="800" height="800" id="myChart" class="myChart">Diagram 1</svg>
+      <svg width="800" height="800" id="chart_diagram1_modal" class="chart_diagram1_modal">Diagram 1</svg>
       <script src="../js/diagram.js"></script>
       <span class="close">&times;</span>
       
