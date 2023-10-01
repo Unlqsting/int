@@ -1,7 +1,9 @@
-// Get the modal
-var dModalContent = document.getElementById("diagramModal");
 
+// Diagram modal code
+
+// Get the modal
 var diagramModal = document.getElementById("diagramModal");
+
 // Get the button that opens the modal
 var btn = document.getElementById("diagram1");
 
@@ -9,27 +11,26 @@ var btn = document.getElementById("diagram1");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on a diagram, open the modal
-function openDiagramModal(event) {
-  dModalContent.style.display = "block";
-  //append the diagram to the modal
-  var clickedDiagram = event.target.querySelector("svg");
-  var clonedDiagram = clickedDiagram.cloneNode(true);
-  var modalContent = diagramModal.querySelector(".dModalContent");
-  modalContent.innerHTML = ""; // Clear any existing content
-  modalContent.appendChild(clonedDiagram);
-
+function openDiagramModal() {
+    diagramModal.style.display = "block";
 }
 
 // When the user clicks on the close button, close the modal
 span.addEventListener("click", function() {
-  dModalContent.style.display = "none";
+  diagramModal.style.display = "none";
 });
 
 // When the user clicks outside the modal, close it
 window.addEventListener("click", function(event) {
-  if (event.target == dModalContent) {
-    dModalContent.style.display = "none";
+  if (event.target == diagramModal) {
+    diagramModal.style.display = "none";
   }
 });
 
-btn.addEventListener("click", openDiagramModal);
+// assign each diagram clicked a var id 
+document.addEventListener("DOMContentLoaded", function() {
+  for (var i = 1; i < 7; i++) {
+      var btn = document.getElementById("diagram" + i);
+      btn.addEventListener("click", openDiagramModal);
+  }
+}); 

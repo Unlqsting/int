@@ -14,49 +14,46 @@
 
 <body>
   <header>
-    <!-- Logo -->
-    <div class="headWrap">
-      <div class="logo">
-        <img src="logo.png" alt="Logo">
-      </div>
-      <!-- Account Icon -->
-      <div class="account">
-        <i id="account-icon" class="fas fa-user-circle account-icon"></i>
-        <div class="account-dropdown">
-          <a href="#"><i class="fas fa-cog"></i> Admin</a>
-          <a href="#"><i class="fas fa-chart-bar"></i> Reports</a>
-          <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
-        </div>
-      </div>
-    </div>
-
+    <!-- Nav bar code -->
     <nav>
       <ul>
-        <li><a href="../pages/internfront.html">Home</a></li>
+        <li ><a href="../pages/internfront.html">Home</a></li>
         <li class="active"><a href="../pages/intstudy.html">Clinical Study</a></li>
         <li><a href="#">Vendors</a></li>
-        <li><a href="#">Specimen</a></li>
+        <li><a href="../pages/speci.html">Specimen</a></li>
         <li><a href="#">Budget</a></li>
         <li><a href="#">Results</a></li>
         <li><a href="#">Resources</a></li>
+        <li class="account">
+          <a href="#">Account</a>
+          <ul class="dropdown">
+            <li><a href="#">Admin</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-  </header>
-  <div id="wrapper" class="wrapper">
-    <div id="filter" class="filter-container">
-      <h2>Filter</h2>
-      <a href="#">Study Phase</a>
-      <a href="#">Study Status</a>
-      <a href="#">Program Name</a>
-      <a href="#">Therapeutic Area</a>
-    </div>
-  
-    <div class="diagram-grid">
-        <canvas id="myChart" class="myChart">Diagram 1</canvas>
-        <div class="diagram1">Diagram 2</div>
-    </div>    
+</header>
+
+<!-- main content -->
+<div id="wrapper" class="wrapper">
+  <div id="filter" class="filter-container">
+    <h2>Filter</h2>
+    <a href="#">Study Phase</a>
+    <a href="#">Study Status</a>
+    <a href="#">Program Name</a>
+    <a href="#">Therapeutic Area</a>
   </div>
-  <!--  -->
+
+  <div class="diagram-grid">
+      <canvas id="myChart" class="myChart">Diagram 1</canvas>
+      <div class="diagram1">Diagram 2</div>
+  </div>    
+</div>
+
+<!-- modal html -->
   <div id="diagramModal" class="diagramModal">
     <!-- Modal content -->
     <div class="dModalContent">
