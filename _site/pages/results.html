@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html>
 <head>
   <title>My Homepage</title>
   
@@ -6,23 +7,28 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <script src="https://kit.fontawesome.com/699ad118a9.js" crossorigin="anonymous"></script>
+
+  <!-- Main content JS code: -->
+  <script src="../js/internfront.js"></script>
+
   <!-- Custom CSS -->
+  <!-- CSS for the homepage, navbar, and filter feature is linked below -->
   <link rel="stylesheet" type="text/css" href="../scss/internfront.css">
   <link rel="stylesheet" href="../scss/nav.css">
   <link rel="stylesheet" href="../scss/filter.css">
 </head>
 
 <body>
-  <header>
+    <header>
     <!-- Nav bar code -->
         <nav>
             <ul>
                 <li><a href="../pages/internfront.html">Home</a></li>
-                <li class="active"><a href="../pages/intstudy.html">Clinical Study</a></li>
+                <li><a href="../pages/intstudy.html">Clinical Study</a></li>
                 <li><a href="../pages/vendors.html">Vendors</a></li>
                 <li><a href="../pages/speci.html">Specimen</a></li>
                 <li><a href="../pages/budget.html">Budget</a></li>
-                <li><a href="../pages/results.html">Results</a></li>
+                <li class="active"><a href="../pages/results.html">Results</a></li>
                 <li><a href="../pages/resources.html">Resources</a></li>
                 <li class="account">
                     <a href="../pages/account/account.html">Account</a>
@@ -37,34 +43,19 @@
         </nav>
     </header>
 
-<!-- main content -->
-<div id="wrapper" class="wrapper">
-  <div id="filter" class="filter-container">
-    <h2>Filter by:</h2>
-    <a href="#">Study Phase</a>
-    <a href="#">Study Status</a>
-    <a href="#">Program Name</a>
-    <a href="#">Therapeutic Area</a>
-  </div>
+  <!-- Filter -->
 
-  <div class="diagram-grid">
-      <canvas id="myChart" class="myChart">Diagram 1</canvas>
-      <div class="diagram1">Diagram 2</div>
-  </div>    
-</div>
+    <div class="wrapper">
+        <div id="filter" class="filter-container">
+            <h2>Filter by:</h2>
+            <a href="#">Study Phase</a>
+            <a href="#">Study Status</a>
+            <a href="#">Program Name</a>
+            <a href="#">Therapeutic Area</a>
+        </div>
 
-<!-- modal html -->
-  <div id="diagramModal" class="diagramModal">
-    <!-- Modal content -->
-    <div class="dModalContent">
-      <span class="close">&times;</span>
-      <p>example text</p>
     </div>
-  </div>
-  <svg width="500" height="300"></svg>
-  <!--  -->
+
 </body>
-<!--  -->
-<script src="../js/intstudy.js"></script>
 
-
+</html>
